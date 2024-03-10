@@ -1,0 +1,34 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.gridContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto 0 auto;
+}
+
+.content,
+.targetContainer {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.container {
+  padding: 20px;
+  background-color: lightblue;
+}
+
+.targetContainer {
+  padding: 20px;
+  background-color: lightgray; /* Adjust background color for target area */
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}

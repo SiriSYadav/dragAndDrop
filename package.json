@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/react-dnd": "^3.0.2",
+    "@types/react-dnd-html5-backend": "^3.0.2",
+    "react-dnd": "^16.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}

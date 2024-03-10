@@ -1,0 +1,24 @@
+.container {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.draggable-item {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.draggable-item.selected {
+  background-color: lightgrey;
+}
+
+.draggable-item:hover {
+  background-color: lightyellow;
+}
