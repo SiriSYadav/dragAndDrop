@@ -8,7 +8,8 @@ const SourceArea = ({ draggableItems, onDrop }) => {
   const [items, setItems] = useState(draggableItems)
 
   const handleDrop = () => {
-    onDrop(selectedItems.map((index) => items[index]))
+    const droppedItems = selectedItems.map((index) => items[index])
+    onDrop(droppedItems)
     setSelectedItems([])
   }
 
@@ -34,8 +35,13 @@ const SourceArea = ({ draggableItems, onDrop }) => {
   }
 
   return (
-    <div className="container">
+    <div className="sourceContainer">
       <h2>Source Area</h2>
+      {selectedItems.length > 1 && (
+        <button onClick={handleDrop} className="buttonContainer">
+          Drop Selected Items
+        </button>
+      )}
       <ul>
         {items.map((item, index) => (
           <DraggableItem

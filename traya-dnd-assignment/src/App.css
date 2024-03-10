@@ -8,24 +8,25 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  margin: 0 auto 0 auto;
+  width: 100%;
 }
 
-.content,
-.targetContainer {
-  width: 50%;
-  margin: 0 10px;
+.content {
+  width: 100%;
 }
 
 .container {
   padding: 20px;
+  flex: 1;
   background-color: lightblue;
+  width: 33rem;
 }
 
 .targetContainer {
   padding: 20px;
-  background-color: lightgray; /* Adjust background color for target area */
+  background-color: lightgray;
+  margin-left: 20px;
+  flex: 1;
 }
 
 ul {

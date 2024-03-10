@@ -8,6 +8,7 @@ const DraggableItem = ({
   moveItem,
   isSelected,
   onSelect,
+  onReturn,
 }) => {
   const [{ isDragging }, drag] = useDrag({
     type: 'item',
@@ -26,27 +27,32 @@ const DraggableItem = ({
     },
     hover: (draggedItem) => {
       if (index !== draggedItem.index) {
-        moveItem(draggedItem.index, index)
-        draggedItem.index = index
+        const hoverIndex = index
+        moveItem(draggedItem.index, hoverIndex)
+        draggedItem.index = hoverIndex
       }
     },
     canDrop: () => true,
   })
 
   const handleClick = () => {
-    onSelect(index)
+    if (isSelected && onReturn) {
+      onReturn(index)
+    } else {
+      onSelect(index)
+    }
   }
 
   return (
     <li
       ref={(node) => {
-        drag(node)
-        drop(node)
+        drag(drop(node))
       }}
       style={{
         opacity: isDragging ? 0.5 : 1,
         cursor: isDragging ? 'grabbing' : 'grab',
-        background: isSelected ? 'lightblue' : 'transparent',
+        background: isSelected ? 'green' : 'transparent',
+        margin: '10px',
       }}
       onClick={handleClick}
     >
@@ -65,6 +71,7 @@ DraggableItem.propTypes = {
   moveItem: PropTypes.func.isRequired,
   isSelected: PropTypes.bool,
   onSelect: PropTypes.func,
+  onReturn: PropTypes.func,
 }
 
 export default DraggableItem
