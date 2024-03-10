@@ -27,7 +27,7 @@ To run the application locally, follow these steps:
 **Clone the repository:**
   git clone https://github.com/your-username/drag-and-drop.git
 **Navigate into the project directory:**
-  cd drag-and-drop
+  cd traya-dnd-assignment
 **Install dependencies:**
   npm install
 **Start the development server:**
