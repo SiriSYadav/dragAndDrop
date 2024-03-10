@@ -34,6 +34,9 @@ To run the application locally, follow these steps:
   npm start
 Open your browser and visit http://localhost:3000 to view the application.
 
+**Live Demo:**
+  https://sirisyadav.github.io/dragAndDrop/
+
 **Feedback**
 If you have any feedback, suggestions, or issues regarding the application, please feel free to open an issue on the GitHub repository or contact us directly.
 
