@@ -27,20 +27,28 @@ function App() {
     )
   }
 
+  const handleReturn = (returnedItem) => {
+    setDraggableItems((prevItems) => [...prevItems, returnedItem])
+    // const updatedItems = droppedItems.filter((_, i) => i !== returnedItem.index)
+    // setDroppedItems(updatedItems)
+  }
+
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="gridContainer">
-        <div className="content">
-          <div className="container">
-            <SourceArea
-              draggableItems={draggableItems}
-              setDraggableItems={setDraggableItems}
-              onDrop={handleDrop}
-            />
-          </div>
+        <div className="container">
+          <SourceArea
+            draggableItems={draggableItems}
+            setDraggableItems={setDraggableItems}
+            onDrop={handleDrop}
+          />
         </div>
         <div className="targetContainer">
-          <TargetArea droppedItems={droppedItems} onDrop={handleDrop} />
+          <TargetArea
+            droppedItems={droppedItems}
+            onDrop={handleDrop}
+            onReturn={handleReturn}
+          />
         </div>
       </div>
     </DndProvider>

@@ -1,6 +1,7 @@
-.container {
+.sourceContainer {
   background-color: lightblue;
   padding: 20px;
+  text-align: center;
 }
 
 ul {
@@ -21,4 +22,8 @@ ul {
 
 .draggable-item:hover {
   background-color: lightyellow;
+}
+
+.buttonContainer {
+  width: 10rem;
 }
