@@ -35,6 +35,7 @@ function App() {
 
   return (
     <DndProvider backend={HTML5Backend}>
+      <h1>Drag & Drop</h1>
       <div className="gridContainer">
         <div className="container">
           <SourceArea
